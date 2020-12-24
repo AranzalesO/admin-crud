@@ -1,0 +1,256 @@
+/*
+    Esto se va a componer de una parte general para el css con la clase del background y el formulario.
+    La tabla será generada por el Bootstrap
+*/
+
+
+/*=== General ===*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-attachment: fixed;
+}
+
+section {
+    padding: 5px;
+}
+
+
+/*=======TITLE SECTON=====*/
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-left: 100px;
+    margin-top: 400px;
+    justify-content: center;
+}
+
+
+/*=====Menu bar=========*/
+
+.main-menu {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+
+/*=====STICKY NAV=====*/
+
+nav.sticky {
+    background: #021e26;
+    padding: 15px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-menu ul {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-menu .logo {
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 800px;
+    letter-spacing: 2px;
+    margin-right: auto;
+}
+
+.main-menu ul li {
+    position: relative;
+    list-style: none;
+}
+
+.main-menu ul li a:hover {
+    text-decoration: none;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    display: inline-block;
+    margin: auto;
+    padding: 5px 10px;
+}
+
+.main-menu ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: normal;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dropdown-hover {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-hover:hover .dropdown-content {
+    display: block;
+    z-index: 1
+}
+
+.dropdown-hover:first-child,
+.w3-dropdown-click:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.dropdown-hover:hover>.button:first-child {
+    background-color: #ccc;
+    color: #000;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    cursor: auto;
+    color: #000;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    margin: 0;
+    padding: 0;
+}
+
+.bar-block .dropdown-hover {
+    width: 100%;
+}
+
+.bar-block .dropdown-hover .dropdown-content {
+    min-width: 100%;
+}
+
+.bar-block .dropdown-hover .button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.dropdown-hover {
+    position: static;
+    float: left;
+}
+
+.bar-block .bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    outline: none;
+    white-space: normal;
+    float: none;
+}
+
+.bar-block .center .bar-item {
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu-container {
+    margin-left: 2%;
+    max-width: 100px;
+    padding: 0.01em 16px;
+    float: left!important;
+    padding-top: 16px!important;
+    padding-bottom: 16px!important;
+    background-color: transparent!important;
+}
+
+@media (max-width:768px) {
+    .dropdown-hover .dropdown-content {
+        position: relative
+    }
+    .bar-item .dropdown-hover {
+        text-align: center;
+        text-decoration: none;
+    }
+    .dropdown-hover .button {
+        width: 100%;
+    }
+}
+
+.profile-circle {
+    border-radius: 100%;
+}
+
+
+/*===========COLORS============ */
+
+.teal,
+.hover-teal:hover {
+    color: #fff!important;
+    background-color: red!important;
+    text-decoration: none;
+}
+
+.black,
+.hover-black:hover {
+    color: #fff!important;
+    background-color: #000!important;
+}
+
+
+/*============FORM=============*/
+
+form {
+    width: 65%;
+    margin-top: 140px;
+    margin-bottom: 80px;
+    margin-left: 260px;
+}
+
+
+/*============TABLE============*/
+
+.container {
+    width: 70%;
+    justify-content: center;
+    position: relative;
+    margin-top: 220px;
+}

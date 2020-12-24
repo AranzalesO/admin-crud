@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- PARTE CENTRAL DEL EJERCICIO. EN ESTE MOMENTO DEL NAV DEBE SER POSIBLE CREAR UN CRUD QUE AGRGUE UN AUTO
+    CON LAS SIGUIENTE CARACTERÍSTICAS:
+            --Marca
+            --Modelo
+            --Color
+            --Año
+            --Precio -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercury</title>
+
+    <!--LINK ICON-->
+    <link rel="icon" href="https://www.flaticon.es/svg/static/icons/svg/1033/1033036.svg">
+
+    <!--LINK REL STYLES CSS-->
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+
+    <!--LINK REL FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- NAV BEGINING -->
+    <nav class="main-menu sticky">
+        <div class="toogle"></div>
+        <span class="logo ">Mercury</span>
+
+        <div id="desktop-menu ">
+            <div class='menu-container dropdown-hover'>
+                <a href=" "><img src="/img/user.png " alt="user " class='profile-circle' style='width: 100%'></a>
+                <div class='dropdown-content bar-block  black'>
+                    <a href="#" class="bar-item button hover-teal "><i class='fa fa-edit'></i> Profile</a>
+                    <a href="form.html " class="bar-item button hover-teal"><i class='fas fa-sign-out-alt'></i> Log out</a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- FORM -->
+    <section id="form">
+        <div class="container col-lg-12 col-md-12 col-sm-12 ml-0" styles="display: flex; justify-content: center">
+            <form class="needs-validation" onsubmit="event.preventDefault(), submitCar()" action="/cars">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="brand">* Brand</label>
+                        <input type="text" class="form-control" id="brand" placeholder="Paxstombroot" required>
+                        <div class="valid-feedback">
+                            Good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide the brand.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="model">* Model</label>
+                        <input type="text" class="form-control" id="model" placeholder="E" required>
+                        <div class="valid-feedback">
+                            Fine!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide the car model.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="color">* Color</label>
+                        <input type="text" class="form-control" id="color" placeholder="Black" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid color.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="year">* Year</label>
+                        <input type="datetime" class="form-control" id="year" placeholder="2004" required>
+                        <div class="invalid-feedback">
+                            Please provide a Year.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="price">* Price</label>
+                        <input type="number" class="form-control" id="price" placeholder="$$$" required>
+                        <div class="invalid-feedback">
+                            Please provide a price.
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="description">Description</label>
+                        <input type="textarea" class="form-control" id="description" placeholder="Add a little description">
+                        <div class="valid-feedback">
+                            Good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a description of the car.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Agree terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-danger" type="submit">Submit car</button>
+            </form>
+    </section>
+    </div>
+
+    <!-- Here's where the magic goes -->
+    <div class="container mb-5" style="width:100%; display: flex; justify-content: center;">
+        <div id="cars-cards" class="row">
+
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <!-- Firebase configuration -->
+    <script src="./js/firebase.js "></script>
+
+    <!-- Crud -->
+    <script src="./js/main.js "></script>
+</body>

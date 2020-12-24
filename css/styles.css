@@ -1,0 +1,128 @@
+/*=== General ===*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    color: black;
+}
+
+section {
+    padding: 70px;
+}
+
+
+/*HERO HEADER SECTION*/
+
+.hero_header {
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_header h2 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.hero_header h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+
+/*=== Header toogle navigation ===*/
+
+
+/*MAIN NAVIGATION*/
+
+.main-menu {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+
+/*STICKY NAV*/
+
+nav.sticky {
+    background: black;
+    padding: 15px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-menu ul {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-menu .logo {
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 800px;
+    margin-right: auto;
+    letter-spacing: 2px;
+}
+
+nav.sticky .logo {
+    color: white;
+}
+
+.main-menu ul li {
+    position: relative;
+    list-style: none;
+}
+
+.main-menu ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.main-menu ul li a:hover {
+    transition: all .5s ease;
+    text-decoration: none;
+    color: red;
+    border-radius: 5px;
+    display: inline-block;
+    margin: auto;
+    padding: 5px 10px;
+}
+
+
+/*========Background=========*/
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-video video {
+    min-width: 100%;
+    min-height: 100%;
+}
